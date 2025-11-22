@@ -6,6 +6,5 @@ plan: free
 buildcommands: ""
 startcommand: python main.py
 envVars:
-  key: TOKEN
+ - key: TOKEN
     sync: false
-
