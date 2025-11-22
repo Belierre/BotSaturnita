@@ -7,10 +7,10 @@ from flask import Flask
 from threading import Thread
 from dotenv import load_dotenv
 
-.# Cargar token
+# Cargar token
 load_dotenv()
 
-.# Intents
+# Intents
 intents = discord.Intents.default()
 intents.members = True
 intents.message_content = True
@@ -170,4 +170,5 @@ Thread(target=run).start()
 
 # Ejecutar bot
 bot.run(os.getenv("TOKEN")) 
+
 
