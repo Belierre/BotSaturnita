@@ -1,4 +1,5 @@
-discord.pycord
+discord.py
 python-dotenv
 flask
+
 
