@@ -3,4 +3,3 @@ python-dotenv
 py-cord
 nextcord
 flask
-
