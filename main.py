@@ -1,26 +1,19 @@
 import discord
 from discord.ext import commands
+import json
 import os
-from dotenv import load_dotenv
-import sqlite3
-import random
 import datetime
+from flask import Flask
+from threading import Thread
+from dotenv import load_dotenv
 
-# --- CARGA DEL TOKEN Y CONFIGURACIÓN BASE ---
+.# Cargar token
 load_dotenv()
-TOKEN = os.getenv('DISCORD_TOKEN')
 
-# Manejo de error si el token no se carga
-if TOKEN is None:
-    print("❌ ERROR CRÍTICO: El token de Discord no se ha cargado. Revise su archivo .env")
-    exit()
-
-# Definición de Intents (Permisos)
+.# Intents
 intents = discord.Intents.default()
-intents.messages = True
-intents.message_content = True 
 intents.members = True
-
+intents.message_content = True
 # Inicialización del Bot
 bot = commands.Bot(command_prefix='!', intents=intents)
 
@@ -177,3 +170,4 @@ Thread(target=run).start()
 
 # Ejecutar bot
 bot.run(os.getenv("TOKEN")) 
+
