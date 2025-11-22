@@ -1,0 +1,11 @@
+services:
+type: web
+name: ·˚ ༘Saturnitaᓚᘏᗢ
+env: python
+plan: free
+buildcommands: ""
+startcommand: python main.py
+envVars:
+  key: TOKEN
+    sync: false
+
